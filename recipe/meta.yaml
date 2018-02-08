@@ -1,6 +1,6 @@
 {% set name = "diffpy.structure" %}
-{% set version = "1.3.5" %}
-{% set sha256 = "56b5f2ca198ebeafd573dd7d47c47a01822416ac5967a18a47e9740cdc6cbe4b" %}
+{% set version = "3.0a2" %}
+{% set sha256 = "2c3fe73b92a4aa3bac22bbeec04016e27ed5117d6d3b51bc84cc17eda1e57234" %}
 
 package:
   name: {{ name|lower }}
@@ -18,11 +18,11 @@ build:
 
 requirements:
   build:
-    - python
+    - python >=3.5
     - setuptools
     - pycifrw
   run:
-    - python
+    - python >=3.5
     - setuptools
     - numpy >=1.3
     - pycifrw
