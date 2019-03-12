@@ -1,6 +1,6 @@
 {% set name = "diffpy.structure" %}
-{% set version = "3.0a2" %}
-{% set sha256 = "2c3fe73b92a4aa3bac22bbeec04016e27ed5117d6d3b51bc84cc17eda1e57234" %}
+{% set version = "3.0.0" %}
+{% set sha256 = "c255590f02c03ef585e4080a6dd48bc7cf7f65cdcdc3c9aa53dac17f87f2c0c5" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
