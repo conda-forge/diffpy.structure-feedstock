@@ -12,6 +12,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
+  # we need egg_dir to avoid overlapping diffpy/__init__.py files.
+  preserve_egg_dir: True
   noarch: python
   number: 0
   script: python -m pip install --no-deps --ignore-installed .
@@ -22,7 +24,7 @@ requirements:
     - pip
     - setuptools
   run:
-    - python >=3.5
+    - python >=3.5|2.7.*
     - setuptools
     - numpy
     - pycifrw
@@ -36,6 +38,12 @@ test:
     - diffpy.structure.applications
     - diffpy.structure.expansion
     - diffpy.structure.tests
+    # legacy imports
+    - diffpy.Structure
+    - diffpy.Structure.Parsers
+    - diffpy.Structure.applications
+    - diffpy.Structure.expansion
+    - diffpy.Structure.tests
 
 about:
   home: https://github.com/diffpy/diffpy.structure
