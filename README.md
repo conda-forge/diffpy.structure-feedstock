@@ -1,7 +1,3 @@
-<!--
-# -*- mode: jinja -*-
--->
-
 About diffpy.structure
 ======================
 
@@ -26,8 +22,15 @@ definitions of all space groups in over 500 symmetry settings.
 Current build status
 ====================
 
-All platforms:
-[![noarch](https://img.shields.io/circleci/project/github/conda-forge/diffpy.structure-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/diffpy.structure-feedstock)
+
+<table><tr><td>All platforms:</td>
+    <td>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=2856&branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/diffpy.structure-feedstock?branchName=master">
+      </a>
+    </td>
+  </tr>
+</table>
 
 Current release info
 ====================

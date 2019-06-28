@@ -1,6 +1,6 @@
 {% set name = "diffpy.structure" %}
-{% set version = "3.0.0" %}
-{% set sha256 = "c255590f02c03ef585e4080a6dd48bc7cf7f65cdcdc3c9aa53dac17f87f2c0c5" %}
+{% set version = "3.0.1" %}
+{% set sha256 = "eed3367701e8d4b49db1132fe09c9fb7f4e0ea4e575f0ace2bd8825e537864f3" %}
 
 package:
   name: {{ name|lower }}
