@@ -1,33 +1,31 @@
 {% set name = "diffpy.structure" %}
-{% set version = "3.0.1" %}
-{% set sha256 = "eed3367701e8d4b49db1132fe09c9fb7f4e0ea4e575f0ace2bd8825e537864f3" %}
+{% set version = "3.0.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/diffpy/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: 2d7b73287875284fe6568f988e45263db485423784aeef922e66ecfa0ac18ec6
 
 build:
   # we need egg_dir to avoid overlapping diffpy/__init__.py files.
-  preserve_egg_dir: True
+  preserve_egg_dir: true
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python
+    - python >=3.5
     - pip
     - setuptools
   run:
-    - python
+    - python >=3.5
     - setuptools
     - numpy
-    - pycifrw
+    - pycifrw >=4.4.3
     - six
 
 test:
@@ -47,11 +45,10 @@ test:
 
 about:
   home: https://github.com/diffpy/diffpy.structure
-  license: BSD
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.txt
   summary: Crystal structure container and parsers for structure formats.
-
   description: |
     The diffpy.Structure package provides objects for storing atomic
     coordinates, displacement parameters and other crystal structure data.
@@ -66,5 +63,6 @@ about:
 
 extra:
   recipe-maintainers:
-    - CJ-Wright
     - pavoljuhas
+    - st3107
+    - sbillinge
