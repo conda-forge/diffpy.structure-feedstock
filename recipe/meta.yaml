@@ -1,5 +1,5 @@
 {% set name = "diffpy.structure" %}
-{% set version = "3.0.2" %}
+{% set version = "3.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/diffpy/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 2d7b73287875284fe6568f988e45263db485423784aeef922e66ecfa0ac18ec6
+  sha256: 9fd0bf0ffd1450ff6cfa6f8b6daf5d8694a089105b46c556617b46dce91b40c1
 
 build:
   # we need egg_dir to avoid overlapping diffpy/__init__.py files.
