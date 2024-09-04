@@ -33,9 +33,8 @@ test:
     - diffpy
     - diffpy.structure
     - diffpy.structure.parsers
-    - diffpy.structure.applications
+    - diffpy.structure.apps
     - diffpy.structure.expansion
-    - diffpy.structure.tests
 
   requires:
     - pytest
