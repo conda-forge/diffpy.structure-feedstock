@@ -1,5 +1,5 @@
 {% set name = "diffpy.structure" %}
-{% set version = "3.2.0" %}
+{% set version = "3.2.1" %}
 {%- set sha256 = "931da51620a660959d5d7192a781f4e21a91a78174ebe371787f42ba4759af7a" -%}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/d/diffpy_structure/diffpy_structure-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: fc46d222ec17431fddfc7046498ccc98af4a51f4e619cc09f6113c495b780a55
 
 build:
   # we need egg_dir to avoid overlapping diffpy/__init__.py files.
