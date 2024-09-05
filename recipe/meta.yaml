@@ -1,6 +1,5 @@
 {% set name = "diffpy.structure" %}
-{% set version = "3.2.0" %}
-{%- set sha256 = "931da51620a660959d5d7192a781f4e21a91a78174ebe371787f42ba4759af7a" -%}
+{% set version = "3.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,11 +7,9 @@ package:
 
 source:
   url: https://pypi.io/packages/source/d/diffpy_structure/diffpy_structure-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: fc46d222ec17431fddfc7046498ccc98af4a51f4e619cc09f6113c495b780a55
 
 build:
-  # we need egg_dir to avoid overlapping diffpy/__init__.py files.
-  preserve_egg_dir: true
   noarch: python
   number: 0
   script: python -m pip install --no-deps --ignore-installed .
@@ -34,9 +31,8 @@ test:
     - diffpy
     - diffpy.structure
     - diffpy.structure.parsers
-    - diffpy.structure.applications
+    - diffpy.structure.apps
     - diffpy.structure.expansion
-    - diffpy.structure.tests
 
   requires:
     - pytest
