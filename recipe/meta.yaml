@@ -11,14 +11,15 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   host:
     - python >=3.10
-    - pip
     - setuptools
+    - setuptools-git-versioning >2.0
+    - pip
 
   run:
     - python >=3.10
@@ -26,22 +27,21 @@ requirements:
     - numpy <2.0.0
     - pycifrw >=4.4.3
 
-test:
-  imports:
-    - diffpy
-    - diffpy.structure
-    - diffpy.structure.parsers
-    - diffpy.structure.apps
-    - diffpy.structure.expansion
-
+test: 
   requires:
+    - pip
+    - pytest
+  source_files:
+    - tests
+  commands:
+    - pip check
+    - pip list
     - pytest
 
 about:
   home: https://github.com/diffpy/diffpy.structure/
-  license: BSD-3-Clause
-  license_family: BSD
-  license_file: LICENSE.rst
+  license: Free To Use But Restricted
+  license_file: LICENSE.rst, LICENSE_DANSE.rst, LICENSE_pymmlib.rst
   summary: Crystal structure container and parsers for structure formats.
   description: |
     The diffpy.Structure package provides objects for storing atomic
