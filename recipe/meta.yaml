@@ -31,12 +31,15 @@ test:
   requires:
     - pip
     - pytest
-  source_files:
-    - tests
+  imports:
+    - diffpy
+    - diffpy.structure
+    - diffpy.structure.parsers
+    - diffpy.structure.apps
+    - diffpy.structure.expansion
   commands:
     - pip check
     - pip list
-    - pytest
 
 about:
   home: https://github.com/diffpy/diffpy.structure/
