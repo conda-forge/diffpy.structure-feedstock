@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/diffpy.structur
 
 Home: https://github.com/diffpy/diffpy.structure/
 
-Package license: BSD-3-Clause
+Package license: Free To Use But Restricted
 
 Summary: Crystal structure container and parsers for structure formats.
 
