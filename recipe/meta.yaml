@@ -40,8 +40,6 @@ test:
 
 about:
   home: https://github.com/diffpy/diffpy.structure/
-  license: Free To Use But Restricted
-  license_file: LICENSE.rst, LICENSE_DANSE.rst, LICENSE_pymmlib.rst
   summary: Crystal structure container and parsers for structure formats.
   description: |
     The diffpy.Structure package provides objects for storing atomic
