@@ -46,14 +46,14 @@ Current release info
 Installing diffpy.structure
 ===========================
 
-Installing `diffpy.structure` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `diffpy.structure` from the `conda-forge/label/diffpy.structure_rc` channel can be achieved by adding `conda-forge/label/diffpy.structure_rc` to your channels with:
 
 ```
-conda config --add channels conda-forge
+conda config --add channels conda-forge/label/diffpy.structure_rc
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `diffpy.structure` can be installed with `conda`:
+Once the `conda-forge/label/diffpy.structure_rc` channel has been enabled, `diffpy.structure` can be installed with `conda`:
 
 ```
 conda install diffpy.structure
@@ -68,26 +68,26 @@ mamba install diffpy.structure
 It is possible to list all of the versions of `diffpy.structure` available on your platform with `conda`:
 
 ```
-conda search diffpy.structure --channel conda-forge
+conda search diffpy.structure --channel conda-forge/label/diffpy.structure_rc
 ```
 
 or with `mamba`:
 
 ```
-mamba search diffpy.structure --channel conda-forge
+mamba search diffpy.structure --channel conda-forge/label/diffpy.structure_rc
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search diffpy.structure --channel conda-forge
+mamba repoquery search diffpy.structure --channel conda-forge/label/diffpy.structure_rc
 
 # List packages depending on `diffpy.structure`:
-mamba repoquery whoneeds diffpy.structure --channel conda-forge
+mamba repoquery whoneeds diffpy.structure --channel conda-forge/label/diffpy.structure_rc
 
 # List dependencies of `diffpy.structure`:
-mamba repoquery depends diffpy.structure --channel conda-forge
+mamba repoquery depends diffpy.structure --channel conda-forge/label/diffpy.structure_rc
 ```
 
 
