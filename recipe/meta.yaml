@@ -1,5 +1,5 @@
 {% set name = "diffpy.structure" %}
-{% set version = "3.2.1" %}
+{% set version = "3.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/d/diffpy_structure/diffpy_structure-{{ version }}.tar.gz
-  sha256: fc46d222ec17431fddfc7046498ccc98af4a51f4e619cc09f6113c495b780a55
+  sha256: fec2acf9c03668935702ad9fba082fb887d33a1a0ca587987a65cf055783a1d0
 
 build:
   noarch: python
-  number: 1
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -27,7 +27,7 @@ requirements:
     - numpy <2.0.0
     - pycifrw >=4.4.3
 
-test: 
+test:
   requires:
     - pip
     - pytest
