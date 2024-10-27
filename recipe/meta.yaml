@@ -16,13 +16,13 @@ build:
 
 requirements:
   host:
-    - python >=3.10
+    - python >=3.11
     - setuptools
     - setuptools-git-versioning >=2.0
     - pip
 
   run:
-    - python >=3.10
+    - python >=3.11
     - numpy
     - pycifrw >=4.4.3
 
