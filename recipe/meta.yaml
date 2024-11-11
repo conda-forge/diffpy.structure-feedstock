@@ -1,12 +1,13 @@
 {% set name = "diffpy.structure" %}
 {% set version = "3.3.0" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/d/diffpy_structure/diffpy_structure-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/d/diffpy_structure/diffpy_structure-{{ version }}.tar.gz
   sha256: b334deedb1781b0542edac3eff0f47a68a92aa5f633418747ebbcc5d2e9575cb
 
 build:
@@ -16,18 +17,19 @@ build:
 
 requirements:
   host:
-    - python >=3.11
+    - python {{ python_min }}
     - setuptools
     - setuptools-git-versioning >=2.0
     - pip
 
   run:
-    - python >=3.11
+    - python >={{ python_min }}
     - numpy
     - pycifrw >=4.4.3
 
 test: 
   requires:
+    - python {{ python_min }} 
     - pip
     - pytest
   source_files:
