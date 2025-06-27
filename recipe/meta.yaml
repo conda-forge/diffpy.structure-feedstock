@@ -1,5 +1,5 @@
 {% set name = "diffpy.structure" %}
-{% set version = "3.3.0" %}
+{% set version = "3.3.1rc0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/d/diffpy_structure/diffpy_structure-{{ version }}.tar.gz
-  sha256: b334deedb1781b0542edac3eff0f47a68a92aa5f633418747ebbcc5d2e9575cb
+  sha256: 5ee56bcc3d95c128bfb7421cd38783b46af801cfed2d11b1f85d55da47b38ff4
 
 build:
   noarch: python
