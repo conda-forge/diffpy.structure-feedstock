@@ -25,7 +25,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - numpy
-    - pycifrw >=4.4.3
+    - pycifrw
 
 test:
   requires:
@@ -41,7 +41,7 @@ test:
 
 about:
   home: https://github.com/diffpy/diffpy.structure/
-  license: Free To Use But Restricted
+  license: LicenseRef-diffpy
   license_file: LICENSE.rst
   summary: Crystal structure container and parsers for structure formats.
   description: |
