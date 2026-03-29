@@ -26,19 +26,12 @@ requirements:
     - python >={{ python_min }}
     - numpy
     - pycifrw
-    - diffpy.utils
 
 test:
   requires:
     - python {{ python_min }}
     - pip
     - pytest
-    - flake8
-    - codecov
-    - coverage
-    - pytest-cov
-    - pytest-env
-
   source_files:
     - tests
   commands:
