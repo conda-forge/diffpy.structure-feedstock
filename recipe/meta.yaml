@@ -1,5 +1,5 @@
 {% set name = "diffpy.structure" %}
-{% set version = "3.5.0" %}
+{% set version = "3.5.1" %}
 {% set python_min = "3.12" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/d/diffpy_structure/diffpy_structure-{{ version }}.tar.gz
-  sha256: 0e40d840464b550ef7ea77dcb4c5b95ebfa46bea5909722d3395c3bc5f207e7b
+  sha256: 461de983fa40a0ccd8a904bd7028cc6d619b90bcca48a78a4b48731fbffa97cd
 
 build:
   noarch: python
@@ -18,7 +18,7 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - setuptools
+    - setuptools >=62
     - setuptools-git-versioning >=2.0
     - pip
 
